@@ -1,0 +1,69 @@
+/*---------------Typefaces---------------*/
+@font-face {
+  font-family: "Soehne";
+  src: url("../css/fonts/soehne-breit-test-buch.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Soehne";
+  src: url("../css/fonts/soehne-breit-test-leicht.woff") format("woff");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "Soehne";
+  src: url("../css/fonts/soehne-breit-test-dreiviertelfett.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Grand Slang";
+  src: url("../css/fonts/grandslang-italic-webfont.woff") format("woff");
+}
+
+/*---------------Base CSS---------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Soehne", sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 20px;
+  margin: 10px auto;
+}
+
+li {
+  padding: 10px;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Grand Slang";
+  text-transform: lowercase;
+  font-size: 32px;
+}
+
+p {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
