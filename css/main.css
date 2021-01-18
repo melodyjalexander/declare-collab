@@ -1,25 +1,23 @@
 /*---------------Typefaces---------------*/
 @font-face {
-  font-family: "Soehne";
+  font-family: "Soehne Book";
   src: url("../css/fonts/soehne-breit-test-buch.woff") format("woff");
-  font-weight: normal;
 }
 
 @font-face {
-  font-family: "Soehne";
+  font-family: "Soehne Light";
   src: url("../css/fonts/soehne-breit-test-leicht.woff") format("woff");
-  font-weight: light;
 }
 
 @font-face {
-  font-family: "Soehne";
+  font-family: "Soehne Bold";
   src: url("../css/fonts/soehne-breit-test-dreiviertelfett.woff") format("woff");
-  font-weight: bold;
 }
 
 @font-face {
   font-family: "Grand Slang";
-  src: url("../css/fonts/grandslang-italic-webfont.woff") format("woff");
+  src: url("../css/fonts/grandslang-italic-webfont.woff2") format("woff2")
+    url("../css/fonts/grandslang-italic-webfont.woff") format("woff");
 }
 
 /*---------------Base CSS---------------*/
@@ -28,12 +26,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Soehne", sans-serif;
 }
 
 nav {
@@ -62,7 +61,13 @@ h1 {
   font-size: 32px;
 }
 
+h2 {
+  font-family: "Soehne Bold", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
 p {
+  font-family: "Soehne Book", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 2px;
