@@ -97,13 +97,12 @@ let quotes = [
 let chosenCategory = "";
 
 function renderQuotes() {
-  let randomItem = [Math.floor(Math.random() * quotes.length)];
   let html = quotes
     .filter((quote) =>
       chosenCategory === "" ? true : chosenCategory === quote.category
     )
-    .map((quote) => `<li><h3>${quote.motivation[randomItem]}</h3></li>`);
-  .reduce((accum, currentVal) => accum + currentVal);
+    .map((quote) => `<li><h3>${quote.motivation}</h3></li>`)
+    .reduce((accum, currentVal) => accum + currentVal);
 
   let elem = document.getElementById("quoteList");
   elem.innerHTML = html;
