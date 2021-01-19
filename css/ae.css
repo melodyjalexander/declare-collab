@@ -128,6 +128,26 @@ button:hover {
   background-color: #f3dbe0;
 }
 
+.ae-title {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.select-button {
+  font-family: "Soehne Bold", Arial, Helvetica, sans-serif;
+  font-weight: unset;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.select-button:hover {
+  font-family: "Soehne Bold", Arial, Helvetica, sans-serif;
+  font-weight: unset;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+}
+
 /*---------------Desktop Styles---------------*/
 
 .top-navigation {
@@ -163,10 +183,43 @@ button:hover {
   text-transform: uppercase;
 }
 
+/*---------------Desktop Styles---------------*/
+
 .accordion .details {
   display: none;
 }
 
+.accordion .select-button {
+  display: none;
+}
+
+.accordion.active .select-button {
+  display: block;
+  max-width: 50%;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
 .accordion.active .details {
   display: block;
+  max-width: 50%;
+  margin-left: 50px;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin: 20px 40px;
+}
+
+.accordion .small-button {
+  margin: 20px 20px;
+}
+
+.ae-chooser {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
 }

@@ -101,7 +101,7 @@ function renderQuotes() {
     .filter((quote) =>
       chosenCategory === "" ? true : chosenCategory === quote.category
     )
-    .map((quote) => `<li><h3>${quote.motivation}</h3></li>`)
+    .map((quote) => `<li><p>${quote.motivation}</p></li>`)
     .reduce((accum, currentVal) => accum + currentVal);
 
   let elem = document.getElementById("quoteList");
