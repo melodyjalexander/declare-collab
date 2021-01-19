@@ -133,6 +133,10 @@ button:hover {
   margin-top: 50px;
 }
 
+.instructions {
+  margin-left: 50px;
+}
+
 .select-button {
   font-family: "Soehne Bold", Arial, Helvetica, sans-serif;
   font-weight: unset;
@@ -176,6 +180,7 @@ button:hover {
   margin-top: 50px;
   padding: 12px 24px;
   border-radius: 10px;
+  width: 50%;
   background-color: white;
   font-family: "Soehne Book", Arial, Helvetica, sans-serif;
   font-size: 10px;
@@ -184,7 +189,9 @@ button:hover {
 }
 
 /*---------------Desktop Styles---------------*/
-
+.hidden {
+  display: none;
+}
 .accordion .details {
   display: none;
 }
@@ -202,7 +209,7 @@ button:hover {
 
 .accordion.active .details {
   display: block;
-  max-width: 50%;
+  max-width: 100%;
   margin-left: 50px;
 }
 
@@ -210,7 +217,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 90%;
+  width: 50%;
   margin: 20px 40px;
 }
 
@@ -221,5 +228,12 @@ button:hover {
 .ae-chooser {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 100%;
+}
+
+.ae-images {
+  position: relative;
+  max-height: 500px;
+  max-width: 500px;
+  margin-top: 50px;
 }
