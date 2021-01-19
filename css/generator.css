@@ -128,30 +128,6 @@ button:hover {
   background-color: #f3dbe0;
 }
 
-.ae-title {
-  margin-left: 50px;
-  margin-top: 50px;
-}
-
-.instructions {
-  margin-left: 50px;
-}
-
-.select-button {
-  font-family: "Soehne Bold", Arial, Helvetica, sans-serif;
-  font-weight: unset;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.select-button:hover {
-  font-family: "Soehne Bold", Arial, Helvetica, sans-serif;
-  font-weight: unset;
-  font-size: 25px;
-  text-transform: uppercase;
-  color: navy;
-}
-
 /*---------------Desktop Styles---------------*/
 
 .top-navigation {
@@ -175,12 +151,10 @@ button:hover {
   font-size: 32px;
   text-transform: lowercase;
 }
-
 .small-button {
   margin-top: 50px;
   padding: 12px 24px;
   border-radius: 10px;
-  width: 50%;
   background-color: white;
   font-family: "Soehne Book", Arial, Helvetica, sans-serif;
   font-size: 10px;
@@ -188,52 +162,54 @@ button:hover {
   text-transform: uppercase;
 }
 
-/*---------------Desktop Styles---------------*/
-.hidden {
-  display: none;
-}
-.accordion .details {
-  display: none;
-}
-
-.accordion .select-button {
-  display: none;
+.quotes-section {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 20px auto;
 }
 
-.accordion.active .select-button {
+li {
+  list-style-type: none;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.ae-title {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.instructions {
+  margin-left: 50px;
+}
+
+.main {
+  display: grid;
+  width: 100%;
+}
+
+.categories {
+  grid-area: 1/1/2/2;
   display: block;
   max-width: 50%;
   margin-left: 50px;
   margin-top: 10px;
 }
 
-.accordion.active .details {
-  display: block;
-  max-width: 100%;
-  margin-left: 50px;
-}
-
-#options {
+.final-step {
+  grid-area: 1/2/2/3;
+  max-height: 50px;
+  position: absolute;
+  right: 50px;
+  top: 230px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 50%;
-  margin: 20px 40px;
 }
 
-.accordion .small-button {
-  margin: 20px 20px;
-}
-
-.ae-chooser {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.ae-images {
-  position: relative;
-  max-height: 500px;
-  max-width: 500px;
+/* .tenor-gif {
+  opacity: 80%;
+  width: 400px;
+  height: 400px;
   margin-top: 50px;
-}
+} */

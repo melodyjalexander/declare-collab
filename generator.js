@@ -95,7 +95,6 @@ let quotes = [
 ];
 
 let chosenCategory = "";
-
 function renderQuotes() {
   let html = quotes
     .filter((quote) =>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/ae.css" />
+    <link rel="stylesheet" href="css/generator.css" />
     <title>Quote Generator</title>
   </head>
 
@@ -14,14 +14,24 @@
           <a href="/index.html" class="logo">Declare</a>
         </nav>
       </header>
-      <section>
-        <button class="small-button" id="affirmation">Affirmations</button>
-        <button class="small-button" id="comical">Comical</button>
-        <button class="small-button" id="life">Life</button>
-        <button class="small-button" id="music">Lyrics</button>
-        <button class="small-button" id="surpriseMe">Surprise Me</button>
-        <ul id="quoteList"></ul>
-      </section>
+      <h2 class="ae-title">Choose Your Motivation Style</h2>
+      <p class="instructions">Select each category for motivation your way.</p>
+      <div class="main">
+        <section class="categories">
+          <button class="small-button" id="affirmation">Affirmations</button>
+          <button class="small-button" id="comical">Comical</button>
+          <button class="small-button" id="life">Life</button>
+          <button class="small-button" id="music">Lyrics</button>
+          <button class="small-button" id="surpriseMe">Mix It Up</button>
+          <div class="quotes-section">
+            <ul id="quoteList"></ul>
+          </div>
+        </section>
+        <button class="small-button final-step">
+          Get Your Personalized Motivation!
+        </button>
+      </div>
+
       <script src="generator.js"></script>
     </div>
   </body>

@@ -1,6 +1,6 @@
 let firsts = [
   {
-    id: "90s Nostalgia",
+    id: "90s",
     details:
       "90s Nostalgia focuses on childhood shows, snacks, trends, fashion and video games during the era",
     image: "aesthetics/90s2.jpg",
@@ -53,15 +53,6 @@ let firsts = [
     image: "aesthetics/vintage1.jpg",
   },
 ];
-
-let currentAesthetic = null;
-// const image = (id) => {
-//   firsts.map((first) => first.id === id ? first.image : "Select an aesthetic to learn more")
-//   }
-
-//   <img
-// onClick {() => image(first.id)}
-// src={first.image}></img>
 class Accordion {
   constructor(first, selectButton) {
     this.detailsText = first.details;
@@ -106,9 +97,17 @@ class Accordion {
     this.imgOutputEle.src = this.image;
     this.imgOutputEle.classList.toggle("hidden");
   }
+
+  // launchGen() {
+  //   if (selectButton === "Select 90s") {
+  //     this.launchGen === "/generator90s.html";
+  //   } else if (selectButton === "Select Animecore") {
+  //     selectButton.setAttribute("href", "/generatorAnimecore.html");
+  //   }
+  // }
 }
 
 firsts.forEach((first) => {
-  let currentAcc = new Accordion(first, "Select");
+  let currentAcc = new Accordion(first, "Select" + " " + first.id);
   currentAcc.appendTo(document.getElementById("options"));
 });
