@@ -43,7 +43,6 @@ body {
   background-color: #fffbf8; /* Moving background gradient */
   background: linear-gradient(224deg, #f3dbe0, #d5dcf3, #e6b984, #eeeab0);
   background-size: 800% 800%;
-
   -webkit-animation: AnimationName 55s ease infinite;
   -moz-animation: AnimationName 55s ease infinite;
   animation: AnimationName 55s ease infinite;
@@ -83,11 +82,37 @@ body {
   }
 }
 
-/*---------------Text Styles---------------*/
+.background-image-container {
+  background-repeat: none;
+  background-attachment: fixed;
+  background-color: rgba(255, 240, 245, 0.228);
+  background-image: url("../images/Transparent\ Cloud\ Background.png");
+}
+
+/*---------------More Base---------------*/
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.launch-button:hover {
+  background-color: #f3dbe0;
+}
+
+a,
+a:visited {
+  text-emphasis: none;
+  text-decoration: none;
+  color: #22222f;
+}
+
+/* text styles */
+
 h1 {
   font-family: "Grand Slang", "Times New Roman", Times, serif;
   font-weight: unset;
-  font-size: 45px;
+  font-size: 48px;
 }
 
 h2 {
@@ -122,29 +147,21 @@ p {
   text-decoration: none;
 }
 
+.logo {
+  font-family: "Grand Slang Logo", "Times New Roman", Times, serif;
+  font-size: 32px;
+  text-transform: lowercase;
+}
+
 .logo:hover {
   font-family: "Grand Slang", "Times New Roman", Times, serif;
   font-size: 32px;
   text-transform: lowercase;
 }
 
-a {
-  text-decoration: none;
+button:focus {
+  outline: none;
 }
-
-/*---------------More Base---------------*/
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.launch-button:hover {
-  background-color: #f3dbe0;
-}
-
-/*---------------Desktop Styles---------------*/
 
 /* Navigation Bar */
 .top-navigation {
@@ -153,8 +170,6 @@ img {
   width: 100%;
   height: 80px;
   padding: 15px 25px;
-  background-color: #fdfaaf70;
-  border-bottom: 1px solid #22222f;
 }
 
 .menu {
@@ -165,37 +180,31 @@ img {
   margin: 10px auto;
 }
 
-.logo {
-  font-family: "Grand Slang Logo", "Times New Roman", Times, serif;
-  font-size: 32px;
-  text-transform: lowercase;
-}
-
 /* Body Container */
 .main-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0 60px;
+  padding: 50px 100px;
 }
 
 .launch-hero {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: column;
+  align-items: center;
   width: 100%;
+  margin: 20px;
 }
 
 .launch-text {
-  padding-top: 150px;
   width: 50%;
-  max-width: 650px;
-  margin-right: 10px;
+  text-align: center;
 }
 
 .launch-eyebrow,
 .launch-copy {
   padding: 20px 0;
+  font-size: 14px;
 }
 
 .launch-tagline {
@@ -203,28 +212,16 @@ img {
 }
 
 .launch-button-container {
-  margin: 50px 0;
+  margin: 100px 0;
 }
 
 .launch-button {
+  margin: 25px 0;
   padding: 24px 48px;
   border: 1px solid #22222f; /* Black */
   border-radius: 10px;
   background-color: #fdfaaf; /* White */
   box-shadow: 10px 10px #22222f;
-}
-
-.launch-image {
-  display: flex;
-  margin-left: 10px;
-  width: 50%;
-}
-
-.mid-section {
-  padding: 175px 0;
-  display: block;
-  text-align: center;
-  background-image: url("../images/CLOUDS\ BACKGROUND.png");
 }
 
 .small-button {
@@ -240,60 +237,60 @@ img {
 
 /*---------------Grid---------------*/
 
-.feature-text {
-  padding: 30px 0;
-}
-
 .grid {
   display: grid;
-  grid-gap: 1em 1em;
+  grid-gap: 4em 4em;
   width: 100%;
   text-align: left;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 
 .top-left {
-  grid-area: 1/1/2/2;
-  border-radius: 30px;
+  grid-area: 1/1/1/1;
 }
 
 .see-it {
-  grid-area: 1/2/2/3;
-  padding: 10px 50px;
+  align-self: center;
+  grid-area: 1/2/2/2;
 }
 
 .feature-text {
-  padding-bottom: 80px;
-  font-size: 64px;
+  padding-bottom: 50px;
+  font-size: 48px;
 }
 
 .feature-copy {
   padding: 10px 0;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .feature-image {
   width: 100%;
   height: 100%;
-  object-fit: fill;
 }
 
 .speak-it {
   grid-area: 2/1/3/2;
-  padding: 40px 0;
+  align-self: center;
 }
 
 .mid-right {
   grid-area: 2/2/3/3;
-  border-radius: 30px;
 }
 
 .bottom-left {
   grid-area: 3/1/4/2;
-  border-radius: 30px;
 }
 
 .claim-it {
   grid-area: 3/2/4/3;
-  padding: 40px 0;
+  align-self: center;
+}
+
+.call-to-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 50px 0;
 }
