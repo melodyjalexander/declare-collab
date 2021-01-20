@@ -128,30 +128,6 @@ button:hover {
   background-color: #f3dbe0;
 }
 
-.ae-title {
-  margin-left: 50px;
-  margin-top: 50px;
-}
-
-.instructions {
-  margin-left: 50px;
-}
-
-.select-button {
-  font-family: "Soehne Bold", Arial, Helvetica, sans-serif;
-  font-weight: unset;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.select-button:hover {
-  font-family: "Soehne Bold", Arial, Helvetica, sans-serif;
-  font-weight: unset;
-  font-size: 25px;
-  text-transform: uppercase;
-  color: navy;
-}
-
 /*---------------Desktop Styles---------------*/
 
 .top-navigation {
@@ -175,12 +151,10 @@ button:hover {
   font-size: 32px;
   text-transform: lowercase;
 }
-
 .small-button {
   margin-top: 50px;
   padding: 12px 24px;
   border-radius: 10px;
-  width: 50%;
   background-color: white;
   font-family: "Soehne Book", Arial, Helvetica, sans-serif;
   font-size: 10px;
@@ -188,52 +162,129 @@ button:hover {
   text-transform: uppercase;
 }
 
-/*---------------Desktop Styles---------------*/
-.hidden {
-  display: none;
-}
-.accordion .details {
-  display: none;
-}
-
-.accordion .select-button {
-  display: none;
+.quotes-section {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 20px auto;
 }
 
-.accordion.active .select-button {
+li {
+  list-style-type: none;
+  margin: 20px 0;
+  text-align: right;
+}
+
+.ae-title {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.instructions {
+  margin-left: 50px;
+}
+
+.main {
+  display: grid;
+  width: 100%;
+}
+
+.categories {
+  grid-area: 1/1/2/2;
   display: block;
   max-width: 50%;
   margin-left: 50px;
   margin-top: 10px;
 }
 
-.accordion.active .details {
-  display: block;
-  max-width: 100%;
-  margin-left: 50px;
-}
-
-#options {
+.final-step {
+  grid-area: 1/2/2/3;
+  max-height: 50px;
+  position: absolute;
+  right: 50px;
+  top: 230px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 50%;
-  margin: 20px 40px;
 }
 
-.accordion .small-button {
-  margin: 20px 20px;
+/* <------Form------> */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  background-color: #b19cd9;
+  z-index: 10;
+  width: 500px;
+  max-width: 80%;
+  border-radius: 30px;
 }
 
-.ae-chooser {
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 20px 40px;
+  font-family: "Soehne Bold", Arial, Helvetica, sans-serif;
+  font-weight: unset;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.ae-images {
-  position: relative;
-  max-height: 500px;
-  max-width: 500px;
-  margin-top: 50px;
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.form-body {
+  padding: 20px 40px;
+}
+
+label {
+  font-family: "Soehne Bold", Arial, Helvetica, sans-serif;
+  font-weight: unset;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+input {
+  font-family: "Soehne Book", Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  font-size: 10px;
+  padding-left: 5px;
+  margin: 10px 0;
+  min-height: 30px;
+  min-width: 200px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#submit {
+  width: 100%;
 }

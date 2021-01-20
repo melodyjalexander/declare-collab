@@ -1,6 +1,6 @@
 let firsts = [
   {
-    id: "90s Nostalgia",
+    id: "90s",
     details:
       "90s Nostalgia focuses on childhood shows, snacks, trends, fashion and video games during the era",
     image: "aesthetics/90s2.jpg",
@@ -53,21 +53,14 @@ let firsts = [
     image: "aesthetics/vintage1.jpg",
   },
 ];
-
-// const image = (id) => {
-//   firsts.map((first) => first.id === id ? first.image : "Select an aesthetic to learn more")
-//   }
-
-//   <img
-// onClick {() => image(first.id)}
-// src={first.image}></img>
 class Accordion {
-  constructor(buttonText, detailsText, imageButton) {
-    this.detailsText = detailsText;
-    this.buttonText = buttonText;
-    this.imageButton = imageButton;
+  constructor(first, selectButton) {
+    this.detailsText = first.details;
+    this.buttonText = first.id;
+    this.selectButton = selectButton;
     this.element = null;
-
+    this.image = first.image;
+    this.imgOutputEle = document.querySelector("#images");
     this.generate();
   }
 
@@ -77,10 +70,10 @@ class Accordion {
     button.classList.add("small-button");
     button.onclick = () => this.toggle();
 
-    const imageButton = document.createElement("a");
-    imageButton.append(this.imageButton);
-    imageButton.setAttribute("href", "/generator.html");
-    imageButton.classList.add("select-button");
+    const selectButton = document.createElement("a");
+    selectButton.append(this.selectButton);
+    selectButton.setAttribute("href", "/generator.html");
+    selectButton.classList.add("select-button");
 
     const detailsEle = document.createElement("p");
     detailsEle.append(this.detailsText);
@@ -90,11 +83,7 @@ class Accordion {
     wrapper.classList.add("accordion");
     wrapper.append(button);
     wrapper.append(detailsEle);
-    wrapper.append(imageButton);
-
-    // const image = document.createElement("img");
-    // image.setAttribute("src", first.image);
-    // button.onclick = () => this.toggle();
+    wrapper.append(selectButton);
 
     this.element = wrapper;
   }
@@ -105,10 +94,20 @@ class Accordion {
 
   toggle() {
     this.element.classList.toggle("active");
+    this.imgOutputEle.src = this.image;
+    this.imgOutputEle.classList.toggle("hidden");
   }
+
+  // launchGen() {
+  //   if (selectButton === "Select 90s") {
+  //     this.launchGen === "/generator90s.html";
+  //   } else if (selectButton === "Select Animecore") {
+  //     selectButton.setAttribute("href", "/generatorAnimecore.html");
+  //   }
+  // }
 }
 
 firsts.forEach((first) => {
-  let currentAcc = new Accordion(first.id, first.details, "Select");
+  let currentAcc = new Accordion(first, "Select" + " " + first.id);
   currentAcc.appendTo(document.getElementById("options"));
 });

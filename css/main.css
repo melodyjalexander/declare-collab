@@ -87,7 +87,7 @@ body {
 h1 {
   font-family: "Grand Slang", "Times New Roman", Times, serif;
   font-weight: unset;
-  font-size: 48px;
+  font-size: 45px;
 }
 
 h2 {
@@ -126,6 +126,10 @@ p {
   font-family: "Grand Slang", "Times New Roman", Times, serif;
   font-size: 32px;
   text-transform: lowercase;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*---------------More Base---------------*/
