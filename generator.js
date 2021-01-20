@@ -128,3 +128,47 @@ document.getElementById("surpriseMe").onclick = function () {
   chosenCategory = "";
   renderQuotes();
 };
+
+// <------Modal----->
+const openModalButtons = document.querySelectorAll("[data-modal-target]");
+const closeModalButtons = document.querySelectorAll("[data-close-button]");
+const overlay = document.getElementById("overlay");
+const submitAlert = document.getElementById("submit");
+
+openModalButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal = document.querySelector(button.dataset.modalTarget);
+    openModal(modal);
+  });
+});
+
+overlay.addEventListener("click", () => {
+  const modals = document.querySelectorAll(".modal.active");
+  modals.forEach((modal) => {
+    closeModal(modal);
+  });
+});
+closeModalButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal = button.closest(".modal");
+    closeModal(modal);
+  });
+});
+
+submitAlert.addEventListener("click", () => {
+  alert(
+    "Thanks for submitting! Your personalized motivation will be sent to your email with aesthetically pleasing vibes!"
+  );
+});
+
+function openModal(modal) {
+  if (modal === null) return;
+  modal.classList.add("active");
+  overlay.classList.add("active");
+}
+
+function closeModal(modal) {
+  if (modal === null) return;
+  modal.classList.remove("active");
+  overlay.classList.remove("active");
+}

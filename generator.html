@@ -15,7 +15,7 @@
         </nav>
       </header>
       <h2 class="ae-title">Choose Your Motivation Style</h2>
-      <p class="instructions">Select each category for motivation your way.</p>
+      <p class="instructions">Select the category of motivation your prefer.</p>
       <div class="main">
         <section class="categories">
           <button class="small-button" id="affirmation">Affirmations</button>
@@ -27,10 +27,38 @@
             <ul id="quoteList"></ul>
           </div>
         </section>
-        <button class="small-button final-step">
+        <button data-modal-target="#modal" class="small-button final-step">
           Get Your Personalized Motivation!
         </button>
       </div>
+      <div class="modal" id="modal">
+        <form>
+          <div class="modal-header">
+            Your personalized motivation<br />
+            is almost ready
+            <button class="close-button">&times;</button>
+          </div>
+          <div class="form-body">
+            <!-- Name -->
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" />
+            </div>
+            <!-- Email -->
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" />
+            </div>
+            <!-- Submit button -->
+            <div class="button-container">
+              <button data-close-button class="small-button" id="submit">
+                Get Motivated!
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="overlay"></div>
 
       <script src="generator.js"></script>
     </div>
